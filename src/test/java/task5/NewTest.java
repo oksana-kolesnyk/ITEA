@@ -16,9 +16,7 @@ import org.openqa.selenium.Dimension;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.util.concurrent.TimeUnit;
-
 
 
 public class NewTest {
@@ -32,12 +30,13 @@ public class NewTest {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver,10);
-
     }
+
     @After
     public void tearDown() {
         driver.quit();
     }
+    
     @Test
     public void test() {
         driver.get("https://itea.ua/uk/");
